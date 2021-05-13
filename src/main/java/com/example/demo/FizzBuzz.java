@@ -3,7 +3,7 @@ package com.example.demo;
 public class FizzBuzz {
 
     public void hoge() {
-        for (int i = -100; i < 100; i++) {
+        for (int i = -1000; i < 1000; i++) {
             System.out.println(Integer.toString(i) + " " + a(i));
         }
     }
