@@ -24,6 +24,6 @@ public class FizzBuzzTest {
 		Assertions.assertEquals("", t.a(13));
 		Assertions.assertEquals("", t.a(14));
 		Assertions.assertEquals("FizzBuzz", t.a(15));
-		Assertions.assertEquals("FizzBuzz", t.a(16));
+		Assertions.assertEquals("FizzBuzz", t.a(17));
 	}
 }
