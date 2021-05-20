@@ -29,9 +29,9 @@ jobs:
       
     - name: Send mail
       if: always()
-      uses: actions/setup-java@v2
+      uses: dawidd6/action-send-mail@v3
       with:
-        # mail server settings
+        # Server & Port:
         server_address: smtp.gmail.com
         server_port: 465
         # user credentials
