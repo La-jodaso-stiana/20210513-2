@@ -45,10 +45,32 @@ jobs:
         # email body as text
         # body: ${{github.job}} job in worflow ${{github.workflow}} of ${{github.repository}} has ${{job.status}}
         body: |
-          a
-          b
-          c
-          ${{github.job}}
+          github.action_path      : ${{ github.action_path }}
+          github.actor            : ${{ github.actor }}
+          github.base_ref         : ${{ github.base_ref }}
+          github.event            : ${{ github.event }}
+          github.event_name       : ${{ github.event_name }}
+          github.event_path       : ${{ github.event_path }}
+          github.head_ref         : ${{ github.head_ref }}
+          github.job              : ${{ github.job }}
+          github.ref              : ${{ github.ref }}
+          github.repository       : ${{ github.repository }}
+          github.repository_owner : ${{ github.repository_owner }}
+          github.run_id           : ${{ github.run_id }}
+          github.run_number       : ${{ github.run_number }}
+          github.sha              : ${{ github.sha }}
+          github.token            : ${{ github.token }}
+          github.workflow         : ${{ github.workflow }}
+          github.workspace        : ${{ github.workspace }}
+          
+          job.container           : ${{ job.container }}
+          job.container.id        : ${{ job.container.id }}
+          job.container.network   : ${{ job.container.network }}
+          job.status              : ${{ job.status }}
+          
+          runner.os               : ${{ runner.os }}
+          runner.temp             : ${{ runner.temp }}
+          runner.tool_cache       : ${{ runner.tool_cache }}
         # comma-separated string, send email to
         #to: abc@gmail.com,xyz@gmail.com
         to: ${{secrets.TO_MAIL_ADDRESS}}
