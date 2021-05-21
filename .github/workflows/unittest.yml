@@ -46,3 +46,4 @@ jobs:
         to: ${{secrets.TO_MAIL_ADDRESS}}
         # from email name
         from: XYZ
+        secure: true
