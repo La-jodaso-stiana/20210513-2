@@ -50,6 +50,6 @@ jobs:
         #to: abc@gmail.com,xyz@gmail.com
         to: ${{secrets.TO_MAIL_ADDRESS}}
         # from email name
-        # from: XYZ
+        from: XYZ
         # Optional whether this connection use TLS (default is true if server_port is 465)
         secure: true
