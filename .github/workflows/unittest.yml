@@ -41,10 +41,10 @@ jobs:
         username: ${{secrets.ALPHA_MAIL_ADDRESS}}
         password: ${{secrets.ALPHA_MAIL_ADDRESS_PASSWORD}}
         # email subject
-        subject: ${{github.job}} job of ${{github.repository}} has ${{job.status}}
+        subject: ${{github.job}} job of ${{github.repository}} has ${{job.status}}. actor is ${{github.actor}}
         # email body as text
         # body: ${{github.job}} job in worflow ${{github.workflow}} of ${{github.repository}} has ${{job.status}}
-        body: a
+        body: a \n b \n c
         # comma-separated string, send email to
         #to: abc@gmail.com,xyz@gmail.com
         to: ${{secrets.TO_MAIL_ADDRESS}}
