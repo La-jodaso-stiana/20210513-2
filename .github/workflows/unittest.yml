@@ -41,13 +41,15 @@ jobs:
         username: ${{secrets.ALPHA_MAIL_ADDRESS}}
         password: ${{secrets.ALPHA_MAIL_ADDRESS_PASSWORD}}
         # email subject
-        subject: ${{github.job}} job of ${{github.repository}} has ${{job.status}}
+        # subject: ${{github.job}} job of ${{github.repository}} has ${{job.status}}
+        subject: b
         # email body as text
-        body: ${{github.job}} job in worflow ${{github.workflow}} of ${{github.repository}} has ${{job.status}}
+        # body: ${{github.job}} job in worflow ${{github.workflow}} of ${{github.repository}} has ${{job.status}}
+        body: a
         # comma-separated string, send email to
         #to: abc@gmail.com,xyz@gmail.com
         to: ${{secrets.TO_MAIL_ADDRESS}}
         # from email name
-        from: XYZ
+        # from: XYZ
         # Optional whether this connection use TLS (default is true if server_port is 465)
         secure: true
