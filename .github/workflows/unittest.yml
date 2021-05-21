@@ -47,3 +47,7 @@ jobs:
         # from email name
         from: XYZ
         secure: true
+        # Optional unsigned/invalid certificates allowance:
+        ignore_cert: true
+        # Optional converting Markdown to HTML (set content_type to text/html too):
+        convert_markdown: true  
