@@ -44,7 +44,11 @@ jobs:
         subject: ${{github.job}} job of ${{github.repository}} has ${{job.status}}. actor is ${{github.actor}}
         # email body as text
         # body: ${{github.job}} job in worflow ${{github.workflow}} of ${{github.repository}} has ${{job.status}}
-        body: a \n b%0Ac
+        body: |
+          a
+          b
+          c
+          ${{github.job}}
         # comma-separated string, send email to
         #to: abc@gmail.com,xyz@gmail.com
         to: ${{secrets.TO_MAIL_ADDRESS}}
