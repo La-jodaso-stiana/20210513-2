@@ -29,21 +29,17 @@ jobs:
       
     - name: Send mail
       if: always()
-      uses: dawidd6/action-send-mail@v3
+      uses: test/action-send-mail@v3
       with:
         # Server & Port:
-        #server_address: smtp.gmail.com
         server_address: smtp.alpha-prm.jp
         server_port: 465
         # user credentials
-        #username: ${{secrets.MAIL_ADDRESS}}
-        #password: ${{secrets.MAIL_ADDRESS_PASSWORD}}
         username: ${{secrets.ALPHA_MAIL_ADDRESS}}
         password: ${{secrets.ALPHA_MAIL_ADDRESS_PASSWORD}}
         # email subject
         subject: ${{github.job}} job of ${{github.repository}} has ${{job.status}}. actor is ${{github.actor}}
         # email body as text
-        # body: ${{github.job}} job in worflow ${{github.workflow}} of ${{github.repository}} has ${{job.status}}
         body: |
           github.action_path      : ${{ github.action_path }}
           github.actor            : ${{ github.actor }}
