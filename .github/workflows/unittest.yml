@@ -41,8 +41,7 @@ jobs:
         username: ${{secrets.ALPHA_MAIL_ADDRESS}}
         password: ${{secrets.ALPHA_MAIL_ADDRESS_PASSWORD}}
         # email subject
-        # subject: ${{github.job}} job of ${{github.repository}} has ${{job.status}}
-        subject: b
+        subject: ${{github.job}} job of ${{github.repository}} has ${{job.status}}
         # email body as text
         # body: ${{github.job}} job in worflow ${{github.workflow}} of ${{github.repository}} has ${{job.status}}
         body: a
