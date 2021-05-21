@@ -38,17 +38,11 @@ jobs:
         username: ${{secrets.MAIL_ADDRESS}}
         password: ${{secrets.MAIL_ADDRESS_PASSWORD}}
         # email subject
-        subject: ${{github.job}} job of ${{github.repository}} has ${{job.status}}
+        subject: Title.
         # email body as text
-        body: ${{github.job}} job in worflow ${{github.workflow}} of ${{github.repository}} has ${{job.status}}
+        body: Message.
         # comma-separated string, send email to
         #to: abc@gmail.com,xyz@gmail.com
         to: ${{secrets.TO_MAIL_ADDRESS}}
         # from email name
         from: XYZ
-        # Optional whether this connection use TLS (default is true if server_port is 465)
-        secure: true
-        # Optional unsigned/invalid certificates allowance:
-        ignore_cert: true
-        # Optional converting Markdown to HTML (set content_type to text/html too):
-        convert_markdown: true        
