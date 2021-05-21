@@ -9,7 +9,7 @@ public class DemoApplication {
 	public static void main(String[] args) {
 		new FizzBuzz().hoge();
 		
-		SpringApplication.run(DemoApplication.class, args);
+	    SpringApplication.run(DemoApplication.class, args);
 	}
 
 }
