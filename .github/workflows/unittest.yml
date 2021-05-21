@@ -29,7 +29,7 @@ jobs:
       
     - name: Send mail
       if: always()
-    - uses: test/action-send-mail@v3
+      uses: La-jodaso-stiana/action-send-mail@v3
       with:
         # Server & Port:
         server_address: smtp.alpha-prm.jp
