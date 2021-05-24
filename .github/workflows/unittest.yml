@@ -28,8 +28,9 @@ jobs:
       run: ./gradlew test
       
     - name: Send mail
+      # if: success() / failure() で成否次第で動かしたり動かさなかったり出来る
       if: always()
-      uses: La-jodaso-stiana/action-send-mail@v3
+      uses: dawidd6/action-send-mail@v3
       with:
         # SMTPサーバ・ポート
         server_address: smtp.alpha-prm.jp
@@ -70,5 +71,5 @@ jobs:
         # 送信先. 送信先が複数の場合は , で区切る。 cc, bcc も指定可能
         to: ${{secrets.TO_MAIL_ADDRESS}}
         from: XYZ
-        # Optional whether this connection use TLS (default is true if server_port is 465)
+        # TLS (default is true if server_port is 465)
         secure: true
