@@ -31,15 +31,15 @@ jobs:
       if: always()
       uses: La-jodaso-stiana/action-send-mail@v3
       with:
-        # Server & Port:
+        # SMTPサーバ・ポート
         server_address: smtp.alpha-prm.jp
         server_port: 465
-        # user credentials
+        # 送信元アカウント（設定値は Settings の Sercrets でKey-Value指定で設定）
         username: ${{secrets.ALPHA_MAIL_ADDRESS}}
         password: ${{secrets.ALPHA_MAIL_ADDRESS_PASSWORD}}
-        # email subject
+        # 件名
         subject: ${{github.job}} job of ${{github.repository}} has ${{job.status}}. actor is ${{github.actor}}
-        # email body as text
+        # 本文
         body: |
           github.action_path      : ${{ github.action_path }}
           github.actor            : ${{ github.actor }}
@@ -67,10 +67,8 @@ jobs:
           runner.os               : ${{ runner.os }}
           runner.temp             : ${{ runner.temp }}
           runner.tool_cache       : ${{ runner.tool_cache }}
-        # comma-separated string, send email to
-        #to: abc@gmail.com,xyz@gmail.com
+        # 送信先. 送信先が複数の場合は , で区切る。 cc, bcc も指定可能
         to: ${{secrets.TO_MAIL_ADDRESS}}
-        # from email name
         from: XYZ
         # Optional whether this connection use TLS (default is true if server_port is 465)
         secure: true
